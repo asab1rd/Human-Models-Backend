@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_navigation_menu_items",
+  "info": {
+    "displayName": "Menu Item",
+    "description": "Navigation menu item with sub-menus"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    },
+    "subMenuItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.sub-menu-item"
+    }
+  }
+}

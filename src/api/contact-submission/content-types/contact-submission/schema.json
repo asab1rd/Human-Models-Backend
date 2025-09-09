@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_submissions",
+  "info": {
+    "singularName": "contact-submission",
+    "pluralName": "contact-submissions",
+    "displayName": "Contact Submission",
+    "description": "Contact form submissions"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "inquiryType": {
+      "type": "enumeration",
+      "enum": ["booking", "collaboration", "press", "general"],
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "company": {
+      "type": "string"
+    },
+    "projectDetails": {
+      "type": "richtext"
+    },
+    "budget": {
+      "type": "enumeration",
+      "enum": ["under5k", "from5kTo15k", "from15kTo50k", "over50k", "undisclosed"]
+    },
+    "timeline": {
+      "type": "string"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["files", "images"]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["new", "in-progress", "replied", "closed"],
+      "default": "new"
+    },
+    "submittedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "locale": {
+      "type": "enumeration",
+      "enum": ["en", "fr"],
+      "required": true
+    }
+  }
+}

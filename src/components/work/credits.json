@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_work_credits",
+  "info": {
+    "displayName": "Work Credits",
+    "description": "Photo shoot and campaign credits"
+  },
+  "attributes": {
+    "photographer": {
+      "type": "string"
+    },
+    "stylist": {
+      "type": "string"
+    },
+    "makeupArtist": {
+      "type": "string"
+    },
+    "hairStylist": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "agency": {
+      "type": "string"
+    },
+    "retoucher": {
+      "type": "string"
+    },
+    "production": {
+      "type": "string"
+    }
+  }
+}

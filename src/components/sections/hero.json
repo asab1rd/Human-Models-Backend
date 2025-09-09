@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "Hero Section",
+    "description": "Hero section with media background and CTA"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 120
+    },
+    "subtitle": {
+      "type": "text",
+      "maxLength": 300
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "backgroundMedia": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.media-block",
+      "required": true
+    },
+    "ctaButtons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta-button",
+      "max": 3
+    },
+    "textPosition": {
+      "type": "enumeration",
+      "enum": ["left", "center", "right", "bottom-left", "bottom-center"],
+      "default": "center"
+    },
+    "textColor": {
+      "type": "enumeration",
+      "enum": ["white", "black", "auto"],
+      "default": "white"
+    },
+    "overlay": {
+      "type": "boolean",
+      "default": true
+    },
+    "overlayOpacity": {
+      "type": "integer",
+      "min": 0,
+      "max": 100,
+      "default": 30
+    }
+  }
+}

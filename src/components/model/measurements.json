@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_model_measurements",
+  "info": {
+    "displayName": "Model Measurements",
+    "description": "Model body measurements"
+  },
+  "attributes": {
+    "height": {
+      "type": "string"
+    },
+    "bust": {
+      "type": "string"
+    },
+    "waist": {
+      "type": "string"
+    },
+    "hips": {
+      "type": "string"
+    },
+    "shoes": {
+      "type": "string"
+    },
+    "hair": {
+      "type": "string"
+    },
+    "eyes": {
+      "type": "string"
+    },
+    "dress": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_shared_media_blocks",
+  "info": {
+    "displayName": "Media Block",
+    "description": "Universal media block (image/video/URL)"
+  },
+  "attributes": {
+    "mediaType": {
+      "type": "enumeration",
+      "enum": ["image", "video", "gallery", "external-video", "external-url"],
+      "required": true,
+      "default": "image"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["videos"]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "externalVideoUrl": {
+      "type": "string",
+      "regex": "^https?://(?:www\\.)?(youtube\\.com|youtu\\.be|vimeo\\.com|instagram\\.com)"
+    },
+    "externalUrl": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "text"
+    },
+    "aspectRatio": {
+      "type": "enumeration",
+      "enum": ["1:1", "3:4", "4:3", "16:9", "21:9", "auto"],
+      "default": "auto"
+    }
+  }
+}

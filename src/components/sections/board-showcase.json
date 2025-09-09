@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_board_showcases",
+  "info": {
+    "displayName": "Board Showcase",
+    "description": "Model boards presentation (Women, Men, New Faces)"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "boards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.board-item"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["horizontal", "vertical", "grid"],
+      "default": "horizontal"
+    }
+  }
+}

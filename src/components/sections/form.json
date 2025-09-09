@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sections_forms",
+  "info": {
+    "displayName": "Form Section",
+    "description": "Form section for pages"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "formType": {
+      "type": "enumeration",
+      "enum": ["contact", "booking", "application", "newsletter"],
+      "required": true,
+      "default": "contact"
+    },
+    "fields": {
+      "type": "json"
+    },
+    "submitText": {
+      "type": "string",
+      "default": "Submit"
+    },
+    "successMessage": {
+      "type": "text"
+    },
+    "redirectUrl": {
+      "type": "string"
+    }
+  }
+}

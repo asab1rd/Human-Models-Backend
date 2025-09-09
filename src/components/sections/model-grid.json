@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_sections_model_grids",
+  "info": {
+    "displayName": "Model Grid",
+    "description": "Grid of models with filters"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "gridType": {
+      "type": "enumeration",
+      "enum": ["featured", "board", "search", "custom"],
+      "required": true,
+      "default": "featured"
+    },
+    "boardFilter": {
+      "type": "enumeration",
+      "enum": ["all", "women", "men", "new-faces"],
+      "default": "all"
+    },
+    "featuredModels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::model.model"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["2-columns", "3-columns", "4-columns", "masonry", "carousel"],
+      "default": "3-columns"
+    },
+    "showFilters": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSearch": {
+      "type": "boolean",
+      "default": true
+    },
+    "maxModels": {
+      "type": "integer",
+      "min": 1,
+      "max": 50,
+      "default": 12
+    },
+    "showPagination": {
+      "type": "boolean",
+      "default": true
+    },
+    "ctaButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta-button"
+    }
+  }
+}

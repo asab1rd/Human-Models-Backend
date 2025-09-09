@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "model_applications",
+  "info": {
+    "singularName": "model-application",
+    "pluralName": "model-applications",
+    "displayName": "Model Application",
+    "description": "Model application submissions"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": ["male", "female", "non-binary"],
+      "required": true
+    },
+    "nationality": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "measurements": {
+      "type": "component",
+      "repeatable": false,
+      "component": "model.measurements",
+      "required": true
+    },
+    "experience": {
+      "type": "enumeration",
+      "enum": ["none", "amateur", "semi-professional", "professional"],
+      "required": true
+    },
+    "portfolioPhotos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"],
+      "required": true,
+      "max": 10
+    },
+    "coverLetter": {
+      "type": "richtext"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "model.socials"
+    },
+    "availability": {
+      "type": "enumeration",
+      "enum": ["full-time", "part-time", "freelance", "student"],
+      "required": true
+    },
+    "willingToTravel": {
+      "type": "boolean",
+      "default": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["submitted", "reviewing", "interview", "accepted", "rejected"],
+      "default": "submitted"
+    },
+    "submittedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "notes": {
+      "type": "richtext"
+    }
+  }
+}

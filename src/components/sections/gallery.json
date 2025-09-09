@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sections_galleries",
+  "info": {
+    "displayName": "Gallery Section",
+    "description": "Image/video gallery for sections"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "medias": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.media-block"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["grid", "masonry", "carousel", "lightbox-grid"],
+      "default": "grid"
+    },
+    "columns": {
+      "type": "integer",
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "showLightbox": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

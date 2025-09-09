@@ -4,7 +4,25 @@
 
 Créer un **CMS Strapi 5 ultra-complet** qui modélise **chaque composant et section** du site Human Paris, avec dynamic zones modulaires, support multi-médias (photo/vidéo/URL), et gestion complète i18n français/anglais.
 
+
 **⚠️ IMPORTANT**: Le frontend Human Paris est situé à `../human_paris/` depuis le dossier backend `../human_paris_backend/`
+
+
+
+
+
+ there are no specific phases id like to prioritized
+    - ../human_paris/  path is correct relative to the backend
+generate the migration script at the end
+I've already created the Strapi cloud and it's linked to this repo. I just need to push to my repo and everything will be set up. please check if there's no errors in local etc
+You should use agents in parallel to speed up the process
+and use specialized agents for specific tasks (components, content types, migration, etc.)
+and coordinate with the strapi-cms-expert agent for technical guidance
+
+
+
+
+
 
 ---
 

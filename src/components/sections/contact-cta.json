@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_sections_contact_ctas",
+  "info": {
+    "displayName": "Contact CTA",
+    "description": "Contact call-to-action section"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "primaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta-button"
+    },
+    "secondaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta-button"
+    },
+    "contactInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-link"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": ["default", "overlay", "minimal"],
+      "default": "default"
+    }
+  }
+}

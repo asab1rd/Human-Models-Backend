@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sections_board_items",
+  "info": {
+    "displayName": "Board Item",
+    "description": "Individual board item"
+  },
+  "attributes": {
+    "boardType": {
+      "type": "enumeration",
+      "enum": ["women", "men", "new-faces"],
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "required": true
+    },
+    "modelCount": {
+      "type": "integer"
+    },
+    "linkText": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
+    }
+  }
+}

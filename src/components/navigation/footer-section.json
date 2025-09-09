@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_navigation_footer_sections",
+  "info": {
+    "displayName": "Footer Section",
+    "description": "Footer content section"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.menu-item"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

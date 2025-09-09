@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_sections_featured_models",
+  "info": {
+    "displayName": "Featured Models",
+    "description": "Showcase of selected models"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "models": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::model.model"
+    },
+    "displayStyle": {
+      "type": "enumeration",
+      "enum": ["carousel", "grid", "hero-grid", "spotlight"],
+      "default": "carousel"
+    },
+    "showBio": {
+      "type": "boolean",
+      "default": true
+    },
+    "showMeasurements": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoRotate": {
+      "type": "boolean",
+      "default": true
+    },
+    "rotationSpeed": {
+      "type": "integer",
+      "min": 3000,
+      "max": 10000,
+      "default": 5000
+    }
+  }
+}

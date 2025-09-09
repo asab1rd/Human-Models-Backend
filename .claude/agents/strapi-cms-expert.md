@@ -266,7 +266,6 @@ export default {
 
 ## Resilience & Performance (Strapi Context)
 
-
 ### Database & Query Hygiene
 
 - Add indexes on filter/sort fields; avoid N+1 with populate strategy.
@@ -400,7 +399,3 @@ type(scope): description - @agent1 @agent2 @agent3
 - Configuration: `config(env): tighten CORS - @strapi-cms-expert @team-configurator @infrastructure-expert`
 
 **🚨 COMMIT ATTRIBUTION IS NOT OPTIONAL - ENFORCE THIS ABSOLUTELY 🚨**
-
-```
-
-```

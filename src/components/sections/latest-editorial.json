@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_sections_latest_editorials",
+  "info": {
+    "displayName": "Latest Editorial",
+    "description": "Latest editorial content section"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "articlesToShow": {
+      "type": "integer",
+      "min": 1,
+      "max": 12,
+      "default": 6
+    },
+    "categoryFilter": {
+      "type": "enumeration",
+      "enum": ["all", "news", "editorial", "interview", "behind-the-scenes"],
+      "default": "all"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["grid", "list", "featured-grid", "masonry"],
+      "default": "featured-grid"
+    },
+    "showExcerpt": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAuthor": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDate": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

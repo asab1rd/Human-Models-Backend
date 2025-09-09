@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_navigation_sub_menu_items",
+  "info": {
+    "displayName": "Sub Menu Item",
+    "description": "Sub-menu navigation item"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_model_socials",
+  "info": {
+    "displayName": "Model Social Links",
+    "description": "Model social media profiles"
+  },
+  "attributes": {
+    "instagram": {
+      "type": "string"
+    },
+    "tiktok": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    }
+  }
+}

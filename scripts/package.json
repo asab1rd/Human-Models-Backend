@@ -1,0 +1,19 @@
+{
+  "name": "human-paris-migration",
+  "version": "1.0.0",
+  "description": "Migration scripts for Human Paris CMS",
+  "scripts": {
+    "migrate": "node migrate-complete.js",
+    "migrate:local": "STRAPI_URL=http://localhost:1337 node migrate-complete.js",
+    "migrate:cloud": "node migrate-complete.js",
+    "test-api": "node test-api.js",
+    "validate-content": "node validate-content.js"
+  },
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20"
+  }
+}
