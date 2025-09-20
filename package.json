@@ -21,6 +21,8 @@
     "build:production": "NODE_ENV=production strapi build",
     "start:production": "NODE_ENV=production strapi start",
     "test:api": "node scripts/test-api.js",
+    "test:endpoints": "node scripts/test-api-endpoints.js",
+    "publish:all": "node scripts/publish-all-content.js",
     "lint": "eslint src --ext .js,.ts,.tsx",
     "lint:fix": "eslint src --ext .js,.ts,.tsx --fix",
     "clean": "rm -rf build .tmp/build",
@@ -28,6 +30,7 @@
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.23.3",
+    "@strapi/plugin-documentation": "^5.23.6",
     "@strapi/plugin-users-permissions": "5.23.3",
     "@strapi/strapi": "5.23.3",
     "better-sqlite3": "^12.2.0",

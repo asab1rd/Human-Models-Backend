@@ -6,6 +6,35 @@ export default ({ env }) => ({
       locales: ['en', 'fr'],
     },
   },
+  'documentation': {
+    enabled: true,
+    config: {
+      openapi: '3.0.0',
+      info: {
+        version: '1.0.0',
+        title: 'Human Paris API',
+        description: 'API documentation for Human Paris modeling agency CMS',
+        termsOfService: 'https://humanparis.com/terms',
+        contact: {
+          name: 'API Support',
+          email: 'api@humanparis.com'
+        },
+        license: {
+          name: 'Private',
+        },
+      },
+      'x-strapi-config': {
+        // List of plugins to include in the documentation
+        plugins: ['upload', 'users-permissions', 'i18n'],
+        path: '/documentation',
+      },
+      security: [{ bearerAuth: [] }],
+      servers: [
+        { url: env('PUBLIC_URL', 'http://localhost:1337/api'), description: 'Development server' },
+        { url: 'https://your-production-url.com/api', description: 'Production server' },
+      ],
+    },
+  },
   'upload': {
     config: {
       sizeLimit: 100 * 1024 * 1024, // 100MB for professional photography
