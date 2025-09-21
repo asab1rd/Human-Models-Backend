@@ -159,6 +159,7 @@ export interface SectionsFeaturedModels extends Struct.ComponentSchema {
       ['carousel', 'grid', 'hero-grid', 'spotlight']
     > &
       Schema.Attribute.DefaultTo<'carousel'>;
+    link: Schema.Attribute.Component<'shared.link', false>;
     models: Schema.Attribute.Relation<'manyToMany', 'api::model.model'>;
     rotationSpeed: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
@@ -379,6 +380,19 @@ export interface SharedCtaButton extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
+  info: {
+    displayName: 'Link';
+    icon: 'cursor';
+  };
+  attributes: {
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -530,6 +544,7 @@ declare module '@strapi/strapi' {
       'sections.model-grid': SectionsModelGrid;
       'sections.text-content': SectionsTextContent;
       'shared.cta-button': SharedCtaButton;
+      'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.media-block': SharedMediaBlock;
       'shared.quote': SharedQuote;

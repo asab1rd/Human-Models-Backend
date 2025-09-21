@@ -14,7 +14,7 @@
       "name": "Private",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-09-20T21:59:32.195Z"
+    "x-generation-date": "2025-09-21T11:48:03.361Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -15952,6 +15952,23 @@
           }
         }
       },
+      "SharedLinkComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "label": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "isExternal": {
+            "type": "boolean"
+          }
+        }
+      },
       "SectionsFeaturedModelsComponent": {
         "type": "object",
         "properties": {
@@ -16004,6 +16021,9 @@
           },
           "rotationSpeed": {
             "type": "integer"
+          },
+          "link": {
+            "$ref": "#/components/schemas/SharedLinkComponent"
           }
         }
       },
@@ -19947,9 +19967,6 @@
                   "$ref": "#/components/schemas/NavigationMenuItemComponent"
                 }
               },
-              "ctaButton": {
-                "$ref": "#/components/schemas/SharedCtaButtonComponent"
-              },
               "showSearch": {
                 "type": "boolean"
               },
@@ -20633,9 +20650,6 @@
               "$ref": "#/components/schemas/NavigationMenuItemComponent"
             }
           },
-          "ctaButton": {
-            "$ref": "#/components/schemas/SharedCtaButtonComponent"
-          },
           "showSearch": {
             "type": "boolean"
           },
@@ -20827,9 +20841,6 @@
                   "items": {
                     "$ref": "#/components/schemas/NavigationMenuItemComponent"
                   }
-                },
-                "ctaButton": {
-                  "$ref": "#/components/schemas/SharedCtaButtonComponent"
                 },
                 "showSearch": {
                   "type": "boolean"
