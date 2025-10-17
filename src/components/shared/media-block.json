@@ -28,7 +28,7 @@
     },
     "externalVideoUrl": {
       "type": "string",
-      "regex": "^https?://(?:www\\.)?(youtube\\.com|youtu\\.be|vimeo\\.com|instagram\\.com)"
+      "regex": "^https?://(?:www\\.)?(?:youtube\\.com|youtu\\.be|vimeo\\.com|player\\.vimeo\\.com|instagram\\.com)"
     },
     "externalUrl": {
       "type": "string"
