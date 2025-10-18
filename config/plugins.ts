@@ -55,6 +55,39 @@ export default ({ env }) => ({
         uploadStream: {},
         delete: {},
       },
+      // Sharp configuration for Strapi Cloud compatibility
+      responsiveDimensions: true,
+      // Configure Sharp with conservative settings for cloud environment
+      sharp: {
+        // Use sequential processing to reduce memory usage
+        sequentialRead: true,
+        // Limit concurrent operations
+        concurrency: 1,
+        // Conservative memory limits for cloud environment
+        limitInputPixels: 268402689, // ~16384x16384 pixels
+        // Ensure proper error handling
+        failOnError: false,
+        // Optimize for web delivery
+        jpeg: {
+          quality: 85,
+          progressive: true,
+          force: false,
+        },
+        png: {
+          compressionLevel: 9,
+          adaptiveFiltering: true,
+          force: false,
+        },
+        webp: {
+          quality: 85,
+          force: false,
+        },
+        // Ensure thumbnails are always generated
+        resize: {
+          withoutEnlargement: true,
+          fastShrinkOnLoad: true,
+        },
+      },
     },
   },
   'users-permissions': {

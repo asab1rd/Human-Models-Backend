@@ -39,9 +39,13 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "sharp": "^0.33.0",
+    "sharp": "^0.33.5",
     "slugify": "^1.6.6",
     "styled-components": "^6.0.0"
+  },
+  "optionalDependencies": {
+    "@img/sharp-linux-x64": "^0.33.5",
+    "@img/sharp-linuxmusl-x64": "^0.33.5"
   },
   "devDependencies": {
     "@types/node": "^20",
