@@ -18,23 +18,23 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true,
-      "maxLength": 100,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "maxLength": 100,
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "name",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "targetField": "name",
+      "required": true
     },
     "bio": {
       "type": "richtext",
@@ -46,13 +46,17 @@
     },
     "gender": {
       "type": "enumeration",
-      "enum": ["male", "female", "non-binary"],
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "required": true,
+      "enum": [
+        "male",
+        "female",
+        "non-binary"
+      ]
     },
     "nationality": {
       "type": "string",
@@ -64,115 +68,136 @@
     },
     "city": {
       "type": "enumeration",
-      "enum": ["Paris", "London", "Milan", "New York", "Los Angeles", "Sydney", "Tokyo"],
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "required": true,
+      "enum": [
+        "Paris",
+        "London",
+        "Milan",
+        "New York",
+        "Los Angeles",
+        "Sydney",
+        "Tokyo"
+      ]
     },
     "board": {
       "type": "enumeration",
-      "enum": ["women", "men", "new-faces", "curve", "commercial"],
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "required": true,
+      "enum": [
+        "women",
+        "men",
+        "new-faces",
+        "curve",
+        "commercial"
+      ]
     },
     "isNew": {
       "type": "boolean",
-      "default": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "default": false
     },
     "isFeatured": {
       "type": "boolean",
-      "default": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "default": false
     },
     "isAvailable": {
       "type": "boolean",
-      "default": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "default": true
     },
     "dateAdded": {
       "type": "date",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "required": true
     },
     "profileImage": {
       "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["images"],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "portfolioImages": {
       "type": "media",
-      "multiple": true,
-      "allowedTypes": ["images", "videos"],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
     },
     "measurements": {
       "type": "component",
-      "repeatable": false,
-      "component": "model.measurements",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "component": "model.measurements",
+      "repeatable": false
     },
     "socials": {
       "type": "component",
-      "repeatable": false,
-      "component": "model.socials",
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "component": "model.socials",
+      "repeatable": false
     },
     "compCardPdf": {
       "type": "media",
-      "multiple": false,
-      "allowedTypes": ["files"],
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
     },
     "workExperience": {
       "type": "component",
-      "repeatable": true,
-      "component": "model.work-item"
+      "component": "model.work-item",
+      "repeatable": true
     },
     "specialties": {
       "type": "json",
@@ -190,16 +215,10 @@
         }
       }
     },
-    "photos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::photo.photo",
-      "mappedBy": "model"
-    },
     "seo": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

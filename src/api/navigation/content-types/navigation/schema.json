@@ -29,6 +29,20 @@
         "images"
       ]
     },
+    "lightLogo": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
     "logoAlt": {
       "type": "string",
       "pluginOptions": {
