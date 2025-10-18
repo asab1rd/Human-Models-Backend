@@ -38,13 +38,10 @@ export default ({ env }) => ({
   'upload': {
     config: {
       sizeLimit: 100 * 1024 * 1024, // 100MB for professional photography
-      breakpoints: {
-        xlarge: 1920,
-        large: 1000,
-        medium: 750,
-        small: 500,
-        thumbnail: 150,
-      },
+      // Completely disable automatic responsive image generation for Strapi Cloud
+      // Strapi Cloud handles image optimization and resizing via its CDN
+      // This prevents thumbnail upload errors
+      responsiveDimensions: false,
       providerOptions: {
         localServer: {
           maxage: 300000, // 5 minutes cache
@@ -54,39 +51,6 @@ export default ({ env }) => ({
         upload: {},
         uploadStream: {},
         delete: {},
-      },
-      // Sharp configuration for Strapi Cloud compatibility
-      responsiveDimensions: true,
-      // Configure Sharp with conservative settings for cloud environment
-      sharp: {
-        // Use sequential processing to reduce memory usage
-        sequentialRead: true,
-        // Limit concurrent operations
-        concurrency: 1,
-        // Conservative memory limits for cloud environment
-        limitInputPixels: 268402689, // ~16384x16384 pixels
-        // Ensure proper error handling
-        failOnError: false,
-        // Optimize for web delivery
-        jpeg: {
-          quality: 85,
-          progressive: true,
-          force: false,
-        },
-        png: {
-          compressionLevel: 9,
-          adaptiveFiltering: true,
-          force: false,
-        },
-        webp: {
-          quality: 85,
-          force: false,
-        },
-        // Ensure thumbnails are always generated
-        resize: {
-          withoutEnlargement: true,
-          fastShrinkOnLoad: true,
-        },
       },
     },
   },
