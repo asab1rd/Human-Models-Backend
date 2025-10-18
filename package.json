@@ -29,10 +29,10 @@
     "precommit": "pnpm run lint && pnpm run build"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.23.3",
+    "@strapi/plugin-cloud": "5.28.0",
     "@strapi/plugin-documentation": "^5.23.6",
-    "@strapi/plugin-users-permissions": "5.23.3",
-    "@strapi/strapi": "5.23.3",
+    "@strapi/plugin-users-permissions": "5.28.0",
+    "@strapi/strapi": "5.28.0",
     "better-sqlite3": "^12.2.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
