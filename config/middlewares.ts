@@ -41,39 +41,25 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: function (origin: string, callback: (err: Error | null, allow?: boolean) => void) {
-        // Allow requests with no origin (like mobile apps, Postman, or server-side)
-        if (!origin) {
-          return callback(null, true);
-        }
-
-        // Allowed domains
-        const allowedOrigins = [
-          'http://localhost:3000',
-          'http://localhost:3001',
-          'https://humanparis.com',
-          'https://www.humanparis.com',
-          'https://assets.humanparis.com',
-          process.env.FRONTEND_URL,
-        ].filter(Boolean);
-
-        // Check exact match
-        if (allowedOrigins.includes(origin)) {
-          return callback(null, true);
-        }
-
-        // Allow all Vercel preview deployments (*.vercel.app)
-        if (origin.endsWith('.vercel.app')) {
-          return callback(null, true);
-        }
-
-        // Reject all other origins
-        console.warn(`CORS blocked origin: ${origin}`);
-        callback(new Error('Not allowed by CORS'));
-      },
+      // Use array with wildcard pattern for better Strapi Cloud compatibility
+      origin: [
+        'http://localhost:3000',
+        'http://localhost:3001',
+        'https://humanparis.com',
+        'https://www.humanparis.com',
+        'https://assets.humanparis.com',
+        // Add specific Vercel domains
+        'https://human-models.vercel.app',
+        'https://human-models-git-main.vercel.app',
+        /^https:\/\/.*\.vercel\.app$/, // Regex to allow all *.vercel.app domains
+        process.env.FRONTEND_URL,
+      ].filter(Boolean),
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      // Ensure preflight requests are handled
+      preflightContinue: false,
+      optionsSuccessStatus: 204,
     },
   },
   'strapi::poweredBy',
